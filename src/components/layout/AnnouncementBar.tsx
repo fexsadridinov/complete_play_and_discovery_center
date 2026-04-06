@@ -5,7 +5,10 @@ export function AnnouncementBar() {
   if (!ANNOUNCEMENT_BAR.enabled) return null;
 
   return (
-    <div className="border-b border-white/10 bg-brand-deep text-white">
+    <div
+      data-site-announcement
+      className="border-b border-white/10 bg-brand-deep text-white"
+    >
       <div className="mx-auto flex max-w-content flex-col items-center justify-center gap-2 px-5 py-2.5 text-center sm:flex-row sm:text-left sm:gap-4">
         <p className="max-w-4xl text-xs font-medium leading-relaxed text-white/95 sm:text-[0.8125rem]">
           <span className="mr-2 inline font-semibold uppercase tracking-[0.12em] text-mint">

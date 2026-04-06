@@ -42,6 +42,7 @@ export function Header() {
     <header
       className={`border-b border-ink/5 transition-all duration-300 ${headerBg}`}
     >
+      <div data-site-header-toolbar>
       <Container
         as="div"
         className="flex min-h-[4.75rem] items-center justify-between gap-4 py-3 lg:grid lg:min-h-[5rem] lg:grid-cols-[minmax(0,1.2fr)_auto_minmax(0,1.2fr)] lg:items-center lg:gap-6"
@@ -96,6 +97,7 @@ export function Header() {
           </button>
         </div>
       </Container>
+      </div>
 
       {mobileOpen ? (
         <div

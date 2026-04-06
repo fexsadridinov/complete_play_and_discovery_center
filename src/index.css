@@ -3,6 +3,17 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    /* Fallback before SiteChrome measures; tuned for announcement + toolbar on small screens */
+    --site-chrome-height: 8.25rem;
+  }
+
+  @media (min-width: 768px) {
+    :root {
+      --site-chrome-height: 6.75rem;
+    }
+  }
+
   html {
     scroll-behavior: smooth;
   }
@@ -28,7 +39,9 @@
   main section[id],
   footer[id],
   main [id="mission"] {
-    scroll-margin-top: 7rem;
+    scroll-margin-top: calc(
+      var(--site-chrome-height, 8.25rem) + env(safe-area-inset-top, 0px)
+    );
   }
 
   :focus-visible {

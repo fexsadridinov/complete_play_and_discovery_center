@@ -1,6 +1,2 @@
-import { ANNOUNCEMENT_BAR } from "./site";
-
-/** Fixed chrome: announcement (~2.5rem) + main header */
-export const FIXED_HEADER_TOTAL_CLASS = ANNOUNCEMENT_BAR.enabled
-  ? "pt-[6.875rem]"
-  : "pt-[5.25rem]";
+/** Set on `document.documentElement` by `SiteChrome` — use for hero offset + scroll margin */
+export const SITE_CHROME_HEIGHT_VAR = "--site-chrome-height";

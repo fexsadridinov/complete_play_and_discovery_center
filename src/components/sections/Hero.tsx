@@ -1,7 +1,6 @@
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, ShieldCheck } from "lucide-react";
 import { SITE_LINKS } from "../../constants/links";
-import { FIXED_HEADER_TOTAL_CLASS } from "../../constants/layout";
 import { HERO_TRUST_ITEMS } from "../../data/heroTrust";
 import { Container } from "../ui/Container";
 import { AnchorButton } from "../ui/Button";
@@ -11,7 +10,7 @@ export function Hero() {
 
   return (
     <section
-      className={`relative overflow-hidden bg-white ${FIXED_HEADER_TOTAL_CLASS}`}
+      className="relative overflow-hidden bg-white pt-[calc(var(--site-chrome-height,8.25rem)+env(safe-area-inset-top,0px))]"
       aria-labelledby="hero-heading"
     >
       <div
